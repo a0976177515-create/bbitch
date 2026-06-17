@@ -1,0 +1,8 @@
+{
+  "name": "吉娃娃咖啡廳訂位系統",
+  "description": "吉娃娃咖啡廳專屬的繁體中文訂位系統，具备會員管理、座位預訂、吉娃娃相簿以及即時許願池/留言板功能。",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

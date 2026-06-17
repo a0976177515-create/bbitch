@@ -1,0 +1,55 @@
+{
+  "entities": {
+    "Reservation": {
+      "title": "Reservation",
+      "description": "吉娃娃咖啡廳的預訂紀錄，包含顧客的姓名、電話、預訂日期、時間與吉娃娃想說的話 (專屬留言)",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "訂位唯一ID"
+        },
+        "name": {
+          "type": "string",
+          "description": "訂位人姓名"
+        },
+        "phone": {
+          "type": "string",
+          "description": "聯絡電話"
+        },
+        "guests": {
+          "type": "integer",
+          "description": "用餐人數"
+        },
+        "date": {
+          "type": "string",
+          "description": "預約日期 (YYYY-MM-DD)"
+        },
+        "time": {
+          "type": "string",
+          "description": "預約時間段 (HH:MM)"
+        },
+        "note": {
+          "type": "string",
+          "description": "許願備註，亦即送出到 Firestore 裡的文字欄位內容"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "資料建立時間"
+        },
+        "userId": {
+          "type": "string",
+          "description": "訂位使用者的 UID"
+        }
+      },
+      "required": ["name", "phone", "guests", "date", "time", "note"]
+    }
+  },
+  "firestore": {
+    "/reservations/{reservationId}": {
+      "schema": "Reservation",
+      "description": "咖啡廳訂位與吉娃娃許願卡片之集合"
+    }
+  }
+}
